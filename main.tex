@@ -1,9 +1,9 @@
-%-------------------------
+% -------------------------
 % Resume in Latex
 % Author : Travis Trimboli
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
-%------------------------
+% ------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -89,7 +89,7 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[nosep]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
+% -------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -106,16 +106,22 @@
   \href{https://www.linkedin.com/in/travistrimboli/}{\underline{linkedin.com/in/travistrimboli/}} $|$
 \end{center}
 
-%-----------SUMMARY-----------
+% -----------SUMMARY-----------
 \section*{Summary}
-Accomplished customer advisor with over 8 years of experience helping organizations improve their\
-operations across all security domains. Recognized for blending knowledge from education,\
+Accomplished cybersecurity professional with over 8 years of experience helping organizations improve their\
+operations across all security domains. Experienced in combining software and security engineering\
+to support the development of threat intelligence programs and security operations.\
+Passionate about threat hunting, detection engineering, and vulnerability management, using threat\
+intelligence to drive proactive security measures.
+
+Proven track record of leveraging technical and domain\
+knowledge from education, certifications, and experience to deliver value to customers.\
 continued learning, and hands-on experience to deliver strategic and technical expertise through\
 all stages of program development. Skilled at providing creative, customer-centric, outcome-oriented\ 
 solutions, and passionate about building collaboration between cross-functional teams and stakeholders\ 
 to align vision with needs.
 
-%--------SKILLS------------
+% --------SKILLS------------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
@@ -127,13 +133,40 @@ to align vision with needs.
         }}
 \end{itemize}
 
-%-----------EXPERIENCE-----------------
+% -----------EXPERIENCE-----------------
 \section{Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheading
+{CareFirst BlueCross Blue Shield}{Baltimore, MD / Remote}
+{Senior Cybersecurity Analyst - Threat Intelligence}{May 2025 -- Present}
+\resumeItemListStart
+\item Supported the development of the CareFirst Threat Intelligence Service program with tasks including:
+\begin{itemize}[nosep]
+  \item Advised smaller subsidiaries and clients on developing their security operations and threat intelligence programs.
+  \item Adapted new tools and technologies to streamline processes and improve efficiency.
+  \item Performed monitoring and analysis of threat intelligence data to identify trends and patterns.
+  \item Produced actionable intelligence reports and briefings for stakeholders.
+\end{itemize}
+\item Managed threat intelligence operations, including threat hunting, detection engineering, and vulnerability management.
+\item Actively participated in threat landscape and attack surface analysis to identify emerging threats and vulnerabilities.
+\item Identified areas where threat intelligence can play an active role in improving organizational posture\
+across multiple security domains from network and endpoint to the cloud.
+\item Actively collaborated with security teams on threat intelligence program strategy including but not limited to:
+\begin{itemize}[nosep]
+  \item Establishing intelligence requirements.
+  \item Creating useful workflows.
+  \item Broadening cross-team collaboration.
+  \item Executing on the creation, implementation, and integration of new tools and processes..
+\end{itemize}
+\item Developed custom tools including, a vulnerability prioritization system that uses various data points, including the\
+NIST Likely Exploited Vulnerability (LEV) metric, and a threat actor analysis tool to analyze and visualize\
+threat actor techniques, tactics, and procedures (TTPs).
+\resumeItemListEnd
+
+\resumeSubheading
 {ThreatQuotient}{Reston, VA / Remote}
-{Customer Success Engineer}{Feb 2019 -- Present}
+{Customer Success Engineer}{Feb 2019 -- May 2025}
 \resumeItemListStart
 \item Guided the development of the Customer Success program from the outset with tasks including:
 \begin{itemize}[nosep]
@@ -198,7 +231,7 @@ exceptions tracking, security tool management, tuning, configuration, and metric
 
 \resumeSubHeadingListEnd
 
-%-----------EDUCATION-----------------
+% -----------EDUCATION-----------------
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
@@ -209,26 +242,25 @@ exceptions tracking, security tool management, tuning, configuration, and metric
 {Bachelor of Arts; GPA: 3.80}{Aug 2008 -- May 2013}
 \resumeSubHeadingListEnd
 
-%--------Certifications------------
+% --------Certifications------------
 \section{Certifications}
 \setlist[itemize]{leftmargin=*}
 \begin{itemize}[nosep]
+  \item Certified Information Systems Security Professional (CISSP)
   \item AWS Certified Cloud Practitioner
   \item CompTIA Secuiryt+
 \end{itemize}
 
-%-----------PROJECTS-----------------
-% \section{Projects}
-% \resumeSubHeadingListStart
-% \resumeSubItem{QuantSoftware Toolkit}
-% {Open source Python library for financial data analysis and machine learning for finance.}
-% \resumeSubItem{GitHub Visualization}
-% {Data visualization of Git log data using D3 to analyze project trends over time.}
-% \resumeSubItem{Recommendation System}
-% {Music and movie recommender systems using collaborative filtering on public datasets.}
-% \resumeSubItem{Mac Setup}
-% {Book that gives step-by-step instructions on setting up developer environment on macOS.}
-% \resumeSubHeadingListEnd
+% -----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Vulnerability Evaluation System (VES)}
+{Vulnerability prioritization system that uses various data points, including the NIST Likely Exploited Vulnerability (LEV) metric,\
+to assess vulnerabilities and calculate a unique VES score.}
+\resumeSubItem{TTP Analyzer}
+{Python application for parsing threat intelligence reports and analyzing MITRE ATT\&CK Tactics, Techniques, and Procedures (TTPs)\
+to understand threat actor evolution over time.}
+\resumeSubHeadingListEnd
 
-%-------------------------------------------
+% -------------------------------------------
 \end{document}
