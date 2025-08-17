@@ -42,7 +42,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate PDF is machine readable/ATS parsable
@@ -89,37 +89,65 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[nosep]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
 % -------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\Large Travis Trimboli}} & Email : \href{mailto:travis.trimboli@gmail.com}\\
-%   \href{https://www.linkedin.com/in/travistrimboli/} & Mobile : +1-240-676-1232 \\
-% \end{tabular*}
+% ----------HEADING----------
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Travis Trimboli} \\[5pt]
+\href{https://github.com/tjtrimboli}{\raisebox{-0.1\height}\faGithub\ tjtrimboli} \ $|$ \ 
+\href{https://linkedin.com/in/travistrimboli}{\raisebox{-0.1\height}\faLinkedin\ travistrimboli} \ $|$ \ 
+\href{mailto:travis.trimboli@gmail.com}{\raisebox{-0.1\height}\faEnvelope \ travis.trimboli@gmail.com} \ $|$ \ 
+\href{tel:+12406761232}{\raisebox{-0.1\height}\faMobile \ +1-240-676-1232} \\
+\end{tabularx}
 
-\begin{center}
-  \textbf{\Huge \bfseries Travis Trimboli} \\ \vspace{5pt}
-  \small +1-240-676-1232 $|$ \href{mailto:travis.trimboli@gmail.com}{\underline{travis.trimboli@gmail.com}} $|$
-  \href{https://www.linkedin.com/in/travistrimboli/}{\underline{linkedin.com/in/travistrimboli/}} $|$
-\end{center}
+% \begin{center}
+%   \textbf{\Huge \bfseries Travis Trimboli} \\ \vspace{5pt}
+%   \small +1-240-676-1232 $|$ \href{mailto:travis.trimboli@gmail.com}{\underline{travis.trimboli@gmail.com}} $|$
+%   \href{https://www.linkedin.com/in/travistrimboli/}{\underline{https://linkedin.com/in/travistrimboli}} $|$
+%   \href{https://github.com/tjtrimboli}{\underline{https://github.com/tjtrimboli}} $|$
+% \end{center}
 
 % -----------SUMMARY-----------
 \section*{Summary}
-Accomplished cybersecurity professional with over 8 years of experience helping organizations improve their\
-operations across all security domains. Experienced in combining software and security engineering\
-to support the development of threat intelligence programs and security operations.\
-Passionate about threat hunting, detection engineering, and vulnerability management, using threat\
-intelligence to drive proactive security measures.
-
-Proven track record of leveraging technical and domain\
-knowledge from education, certifications, and experience to deliver value to customers.\
-continued learning, and hands-on experience to deliver strategic and technical expertise through\
-all stages of program development. Skilled at providing creative, customer-centric, outcome-oriented\ 
-solutions, and passionate about building collaboration between cross-functional teams and stakeholders\ 
-to align vision with needs.
+Accomplished cybersecurity professional with over 8 years of experience helping organizations improve\
+their operations across all security domains. Thrive at combining security engineering, research, and\
+analysis to support organizational success through security. Passionate about threat hunting, detection\
+engineering, and vulnerability management, using threat intelligence to drive proactive decision-making.\
+Skilled at translating data and complex threats into practical, actionable defenses that strengthen\
+enterprise security posture.
 
 % --------SKILLS------------
 \section{Technical Skills}
@@ -152,13 +180,7 @@ to align vision with needs.
 \item Actively participated in threat landscape and attack surface analysis to identify emerging threats and vulnerabilities.
 \item Identified areas where threat intelligence can play an active role in improving organizational posture\
 across multiple security domains from network and endpoint to the cloud.
-\item Actively collaborated with security teams on threat intelligence program strategy including but not limited to:
-\begin{itemize}[nosep]
-  \item Establishing intelligence requirements.
-  \item Creating useful workflows.
-  \item Broadening cross-team collaboration.
-  \item Executing on the creation, implementation, and integration of new tools and processes..
-\end{itemize}
+\item Actively collaborated with security teams on threat intelligence program strategy.
 \item Developed custom tools including, a vulnerability prioritization system that uses various data points, including the\
 NIST Likely Exploited Vulnerability (LEV) metric, and a threat actor analysis tool to analyze and visualize\
 threat actor techniques, tactics, and procedures (TTPs).
@@ -181,6 +203,7 @@ and enterprise-level organizations comprising the Fortune 50, 100, and 500 lists
 security operations and threat intelligence programs.
 \item Identified areas where CTI can play an active role in improvising organizational posture\
 across multiple security domains from network and endpoint to the cloud.
+\break
 \item Actively collaborated with security teams on CTI program strategy including but not limited to:\
 establishing intelligence requirements, creating useful workflows, broadening cross-team collaboration,\
 executing on the implementation and integration of new tools and processes, and taking full advantage\
@@ -203,7 +226,6 @@ exceptions tracking, security tool management, tuning, configuration, and metric
 \item Contributed to the development of front-end applications to support SOC team operations.
 \resumeItemListEnd
 
-\break
 \resumeSubSubheading
 {}{Waltham, MA}
 {Sales Engineer}{Oct 2017 -- Aug 2018}
@@ -221,13 +243,13 @@ exceptions tracking, security tool management, tuning, configuration, and metric
 \resumeSubheading
 {Fidelis Cybersecurity}{Bethesda, MD}
 {Account Manager}{Feb 2016 -- Oct 2017}
-\resumeItemListStart
-\item Conducted outbound and inbound B2B prospecting by phone and email for potential Commercial, Government, Defense, and Channel clients.
-\item Communicated core value propositions of Fidelis products and services to C-suite individuals of all industries.
-\item Qualified prospects based on needs, timelines, and budgets for the outside account team.
-\item Accelerated prospects through the sales cycle, promoting revenue-generating outcomes.
-\item Attended trade shows and partner functions to represent Fidelis, showcasing product components and gathering user feedback.
-\resumeItemListEnd
+% \resumeItemListStart
+% \item Conducted outbound and inbound B2B prospecting by phone and email for potential Commercial, Government, Defense, and Channel clients.
+% \item Communicated core value propositions of Fidelis products and services to C-suite individuals of all industries.
+% \item Qualified prospects based on needs, timelines, and budgets for the outside account team.
+% \item Accelerated prospects through the sales cycle, promoting revenue-generating outcomes.
+% \item Attended trade shows and partner functions to represent Fidelis, showcasing product components and gathering user feedback.
+% \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
